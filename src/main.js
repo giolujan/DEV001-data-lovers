@@ -40,7 +40,7 @@ const showFilmInScreen = (arrayData) =>{
        divFilm.classList.add("card");
         divFilm.innerHTML=`<img src="${element.poster}" alt="">
         <p class="films-titles">${element.title}</p> 
-        <p class="subTitleCard"> <span class="spanCard">Productor: </span>${element.producer}</p> 
+        <p class="subTitleCard"><span class="spanCard">Productor: </span>${element.producer}</p> 
         <p class="subTitleCard"><span class="spanCard">Fecha de realizacion: </span> ${element.release_date}</p>
         <p class="subTitleCard"><span class="spanCard">Puntaje: </span> ${element.rt_score}</p>`;
         divFilm.setAttribute("id" , element.id);

@@ -16,6 +16,7 @@ export const getFilm = (data) => {
   return dataGhibli;
 }
  console.log (getFilm);
+ 
  //Searcher all films
  export const searchFilms = (data, condition, value) => {
   return data.filter(item => item[condition].toLowerCase().includes(value.toLowerCase()));

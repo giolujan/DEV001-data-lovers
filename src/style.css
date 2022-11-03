@@ -1,5 +1,5 @@
 body{
-    background-color: peachpuff;
+    background-color: whitesmoke;
 }
 
 /*ejemplo pizza pina
@@ -10,8 +10,10 @@ h3{
 /*titulo*/
 h1{
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 40px;
+    font-family: Helvetica, sans-serif;
+    font-size: 25pt;
+    font-weight: black;
+    text-decoration: underline ;
 }
 
 
@@ -25,16 +27,17 @@ margin: 0 auto;
 /*introduccion encabezado*/
 .introduccion{
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
+    font-family: Helvetica, sans-serif;
+    font-size: 15pt;
     display: flex;
+    padding: 5% 20%;
 }
 
 /*Contenedor de peliculas*/
 .flex-container{
     display: flex;
     width: 80%;
-    justify-content:center;
+    justify-content:right;
     flex-flow: row wrap;
     max-width: 100px;
     align-content: center;
@@ -61,3 +64,59 @@ filter: brightness(100%);
     font-size: 18px;
 }
 
+.containerFilms{
+    justify-content: center;
+}
+
+#showAllFilms{
+ display: flex;
+ flex-wrap: wrap;
+ align-items: baseline;
+}
+
+#showAllFilms div{
+    width: 200px;
+    margin: 30px 30px;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.card {
+    background-color: azure;
+    max-width: 500px;
+    border-radius: 5%;
+    box-shadow: 0 0 12px #d7d7d7;
+}
+
+.card > img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    filter: brightness(70%);
+    
+}
+
+.card > img:hover{
+    filter: brightness(100%);
+    }
+
+.card > p{
+    font-family: Helvetica, sans-serif;
+    padding: 2px 3px;
+}
+
+.films-titles{
+    font-weight: bold;
+    font-size: 12pt;
+    color: azure;
+    margin: 0%;
+    background-color: black;
+    text-align: center;
+}
+.subTitleCard{
+    font-size: 10pt;
+    margin: 5%;
+    text-align: left;
+}
