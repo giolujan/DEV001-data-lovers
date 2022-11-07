@@ -1,114 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
 
-<div class="imageStudiosG" id="StudiosG">
-  <img src="images/StudioGhibli.png">
-</div>
-<h1>Studios Ghibli</h1>
-<div class="introduccion">
- 
-  Studio Ghibli es un estudio de animación japonés, reconocido como uno 
-  de los mejores estudios del género de animación en el cine, tiene un total de 22 películas 
-  producidas (más un Cortometraje).
- 6 de sus películas son las más taquilleras del cine japonés y 5 han sido 
- nominadas al Óscar, ganando el de mejor película de animación El viaje de Chihiro.
-  Los personajes del estudio son muy peculiares, llenos de aspiraciones, emociones 
-  y objetivos. Aquí te dejo con todas las películas de Studio Ghibli ordenadas cronologicamente.
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-</div>
+<body>
+  <div id="root"></div>
+  <header>
+  </header>
 
-
-<!-- <div class="listas">
-      <li>Nausicaa del Valle del Viento (1984)</li>
-      <li>El Castillo en el Cielo (1986)</li>
-      <li>La tumba de las Luciernagas (1988)</li>
-      <li>Mi vecino Totoro (1988)</li>
-      <li>Nicky aprendiz de bruja (1989)</li>
-      <li>Recuerdos del ayer  (1991)</li>
-      <li>Porco Rosso (1992) </li>
-      <li>Puedo escuchar el mar (1993)</li>
-      <li>Pompoko(1994)</li>
-      <a href="#"><li>Susurros del corazon (1995)</a> </li>
-      <li>La princesa Mononoke (1997)</li>
-      <li>Vecinos los Yamada(1999)</li>
-      <li>Viaje de Chihiro (2001)</li>
-      <li>Haru en el reino de los gatos (2002)</li>
-      <li>Castillo Ambulante (2004)</li>
-      <li>Cuentos de Terramar (2006)</li>
-      <li>Ponyo en el acantilado (2008)</li>
-      <li>Arrietty y el mundo de los diminutos(2010)</li>
-      <li>La colina de las amapolas (2011)</li>
-      <li>El viento se levanta (2013)</li>
-      <li>El cuento de la princesa Kaguya(2013)</li>
-      <li>El recuerdo de marnie (2014) </li>
-      <li>Earwing y la bruja (2020)</li>
-    </div>
-
-  <div class="flexbox-container">
-    
-
-      <img src="images/Nausicaa del Valle del Viento(1984).png" class="img">
-      <img src="images/El Castillo en el Cielo (1986).png" class="img">
-      <img src="images/La tumba de las Luciernagas (1988).png.webp" class="img">
-      <img src="images/Mi vecino Totoro (1988).png" class="img">
-
-      <img src="images/Nicky aprendiz de bruja (1989).webp" class="img">
-      <img src="images/Recuerdos del ayer  (1991).png" class="img">
-      <img src="images/Porco Rosso (1992).png" class="img">
-      <img src="images/Puedo escuchar el mar (1993).png" class="img">
-
-      <img src="images/Pompoko (1994).png.jpg" class="img">
-      <img src="images/Susurros del corazon (1995).png" class="img">
-      <img src="images/La princesa Mononoke (1997).png" class="img">
-      <img src="images/Mis Vecinos los Yamada(1999).png" class="img">
-
-      <img src="images/El Viaje de Chihiro (2001).png" class="img">
-      <img src="images/Haru en el reino de los gatos (2002).png" class="img">
-      <img src="images/El castillo ambulante (2004).png" class="img">
-      <img src="images/Cuentos de Terramar (2006).png" class="img">
-
-      <img src="images/Ponyo en el acantilado (2008).png" class="img">
-      <img src="images/Arrietty (2010).png" class="img">
-      <img src="images/La colina de las amapolas (2011).png" class="img">
-      <img src="images/El viento se levanta (2013).png" class="img">
-
-      <img src="images/El cuento de la princesa Kaguya(2013).png" class="img">
-      <img src="images/El recuerdo de marnie (2014).png" class="img">
-      <img src="images/Earwing y la bruja (2020).png" class="img">
-
-
-    </div>
-  -->
-
-    <header>
-    </header>
-
-    <main>
-          <!-- Search -->
-
-          <div class="input-selector filter">
-              <label for="search">
-              </label>
-            <input type="text" id="searchFilm" class="inputSearch" placeholder="Search...">
-
-          </div>
-
-      <section class="containerFilms">
-        <!-- all films -->
-          <div id="showAllFilms"></div> <!-- Show all movies -->
-      </section>
-    </main>
-
+  <div class="imageStudiosG" id="StudiosG">
+    <img src="images/logotipo.png">
   </div>
-<footer>Proyecto Data Lovers creado por Guiomara y Andrea para Laboratoria DEV001</footer>
 
-    <script src="main.js" type="module"></script>
-  </body>
+  <h1>Studios Ghibli</h1>
+
+  <!--<div class="introduccion-btn">
+  <button class="btn-abrir-introduccion" id="btn-abrir-formulario">
+    <i class="fa-solid fa-square-plus"></i>
+  </button>
+</div>-->
+
+  <div class="introduccion">
+    Studio Ghibli es un estudio de animación japonés, reconocido como uno
+    de los mejores estudios del género de animación en el cine, tiene un total de 22 películas
+    producidas (más un Cortometraje).
+    6 de sus películas son las más taquilleras del cine japonés y 5 han sido
+    nominadas al Óscar, ganando el de mejor película de animación El viaje de Chihiro.
+    Los personajes del estudio son muy peculiares, llenos de aspiraciones, emociones
+    y objetivos. Aquí te dejo con todas las películas de Studio Ghibli ordenadas cronologicamente.
+  </div>
+
+
+  <main>
+    <!-- Search -->
+    <div class="input-selector filter">
+      <label for="search">
+      </label>
+      <input type="text" id="searchFilm" class="inputSearch" placeholder="Search...">
+    </div>
+
+    <!--Ordenar peliculas fecha de realizacion-->
+    <div class="ordenarFilms">
+      <select name="orderFilms" id="orderFilms">
+        <option value="">Ordenar por:</option>
+        <option id="mas antiguas" value="1">Mas antiguas</option>
+        <option id="mas nuevas" value="2">Mas recientes</option>
+      </select>
+    </div>
+
+    <!--Ordenar peliculas por orden alabetico-->
+    <div>
+      <select name="orderAZ-ZA" id="sortAZ" class="sortZA">
+        <option value="">Ordenar por:</option>
+        <option value="A-Z">Titulo de la A-Z</option>
+        <option value="Z-A">Titulo de la Z-A</option>
+      </select>
+    </div>
+
+   <!-- Container all films -->
+    <section class="containerFilms">
+      <div id="showAllFilms"></div> <!-- Show all movies -->
+    </section>
+
+  </main>
+
+
+  <footer>Proyecto Data Lovers creado por Guiomara y Andrea para Laboratoria DEV001</footer>
+
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>

@@ -1,31 +1,53 @@
-body{
+body {
     background-color: whitesmoke;
 }
 
-/*ejemplo pizza pina
-h3{
-    font-size: 70px;
-}*/
-
 /*titulo*/
-h1{
+h1 {
     text-align: center;
     font-family: Helvetica, sans-serif;
     font-size: 25pt;
     font-weight: black;
-    text-decoration: underline ;
+    text-decoration: underline;
 }
+
+/*.introduccion-btn .btn-abrir-introduccion{
+
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 20px;
+   background: url(images/icono\ cruz.jpeg);
+    color: rgb(117, 18, 18);
+    position: relative;
+    top: -25px;
+    border-radius: 100%;
+    box-shadow: -5px 4px 8px rgba(24, 56, 182, 0.4);
+    padding: 5px;
+    transition: all .2s ease;
+    border: none;
+    cursor: pointer;
+    position: center;
+}
+
+.introduccion-btn .btn-abrir-introduccion:hover{
+    background: #1050b1;
+}
+
+.introduccion-btn .btn-abrir-introduccion.active{
+    transform: rotate(45deg);
+}*/
 
 
 /*Imagen logotipo*/
-#StudiosG{
-display: flex;
-width: 300px;
-margin: 0 auto;
+#StudiosG {
+    display: flex;
+    width: 300px;
+    margin: 0 auto;
 }
 
 /*introduccion encabezado*/
-.introduccion{
+.introduccion {
     text-align: center;
     font-family: Helvetica, sans-serif;
     font-size: 15pt;
@@ -33,48 +55,19 @@ margin: 0 auto;
     padding: 5% 20%;
 }
 
-/*Contenedor de peliculas*/
-.flex-container{
-    display: flex;
-    width: 80%;
-    justify-content:right;
-    flex-flow: row wrap;
-    max-width: 100px;
-    align-content: center;
-}
 
-/*class que corresponde a cada pelicula*/
-.img{
-    width: 300px;
-    height: 450px;
-    margin-bottom: 40px;
-    margin-left: 40px;
-    object-fit: cover;
-    filter: brightness(70%);
-}
 
-/*efecto brillo peliculas*/
-.img:hover{
-filter: brightness(100%);
-}
-
-/*listado de peliculas*/
-.listas{
-
-    font-size: 18px;
-}
-
-.containerFilms{
+.containerFilms {
     justify-content: center;
 }
 
-#showAllFilms{
- display: flex;
- flex-wrap: wrap;
- align-items: baseline;
+#showAllFilms {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
 }
 
-#showAllFilms div{
+#showAllFilms div {
     width: 200px;
     margin: 30px 30px;
     justify-content: center;
@@ -83,31 +76,32 @@ filter: brightness(100%);
 
 .card {
     background-color: azure;
-    max-width: 500px;
+    max-width: 200px;
     border-radius: 5%;
     box-shadow: 0 0 12px #d7d7d7;
 }
 
-.card > img {
-    width: 100%;
+.card>img {
+    width: 200px;
     height: 300px;
     object-fit: cover;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
     filter: brightness(70%);
-    
+
+
 }
 
-.card > img:hover{
+.card>img:hover {
     filter: brightness(100%);
-    }
+}
 
-.card > p{
+.card>p {
     font-family: Helvetica, sans-serif;
     padding: 2px 3px;
 }
 
-.films-titles{
+.films-titles {
     font-weight: bold;
     font-size: 12pt;
     color: azure;
@@ -115,7 +109,8 @@ filter: brightness(100%);
     background-color: black;
     text-align: center;
 }
-.subTitleCard{
+
+.subTitleCard {
     font-size: 10pt;
     margin: 5%;
     text-align: left;
