@@ -8,13 +8,16 @@
 </head>
 
 <body>
-  <div id="root"></div>
   <header>
+    <div style="position: relative; left: 0; top: 0;">
+      <img src ="images/rC7mw31.jpeg" class="imageCabecera" >
+      <img src ="images/customLogo.png" class="imageLogo" >
+    </div>
   </header>
 
-  <div class="imageStudiosG" id="StudiosG">
+  <!--<div class="imageStudiosG" id="StudiosG">
     <img src="images/logotipo.png">
-  </div>
+  </div>-->
 
   <h1>Studios Ghibli</h1>
 
@@ -47,8 +50,8 @@
     <div class="ordenarFilms">
       <select name="orderFilms" id="orderFilms">
         <option value="">Ordenar por:</option>
-        <option id="mas antiguas" value="1">Mas antiguas</option>
-        <option id="mas nuevas" value="2">Mas recientes</option>
+        <option id="mas antiguas" value="0-9">Mas antiguas</option>
+        <option id="mas nuevas" value="9-0">Mas recientes</option>
       </select>
     </div>
 
@@ -64,6 +67,10 @@
    <!-- Container all films -->
     <section class="containerFilms">
       <div id="showAllFilms"></div> <!-- Show all movies -->
+    </section>
+   <!-- one films -->
+    <section class="SelectFilm">
+      <div id="showOneFilms"></div>
     </section>
 
   </main>

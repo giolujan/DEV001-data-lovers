@@ -38,9 +38,22 @@ h1 {
     transform: rotate(45deg);
 }*/
 
-
+.imageLogo {
+    position:absolute;
+    width: 50%;
+    top: 25%;
+    left : 25%;
+    z-index: 1;
+}
+.imageCabecera {
+    justify-content: center;
+    width:100%;
+    filter: brightness(75%);
+    object-fit: cover;
+    z-index: -1;
+}
 /*Imagen logotipo*/
-#StudiosG {
+/* #StudiosG {
     display: flex;
     width: 300px;
     margin: 0 auto;
@@ -65,25 +78,26 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
+    flex-grow: 1;
 }
 
 #showAllFilms div {
-    width: 200px;
+    width: 250px;
+    height: 500px;
     margin: 30px 30px;
     justify-content: center;
-    flex-grow: 1;
+    
 }
 
 .card {
     background-color: azure;
-    max-width: 200px;
     border-radius: 5%;
     box-shadow: 0 0 12px #d7d7d7;
 }
 
 .card>img {
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 350px;
     object-fit: cover;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
