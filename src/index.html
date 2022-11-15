@@ -9,33 +9,41 @@
 
 <body>
   <div id="root"></div>
-  <header>
+  <header class="header">
+   
   </header>
-
+  <h1>STUDIOS GHIBLI</h1>
   <div class="imageStudiosG" id="StudiosG">
-    <img src="images/logotipo.png">
+    <img src="images/ghibli_logo_gold.png" class="inicio">
   </div>
+<div class="fondofilmes"></div>
+ 
 
-  <h1>Studios Ghibli</h1>
 
-  <!--<div class="introduccion-btn">
-  <button class="btn-abrir-introduccion" id="btn-abrir-formulario">
-    <i class="fa-solid fa-square-plus"></i>
-  </button>
-</div>-->
-
+<section class="informationHeader">
+<section class="encabezado">
   <div class="introduccion">
+    
     Studio Ghibli es un estudio de animación japonés, reconocido como uno
     de los mejores estudios del género de animación en el cine, tiene un total de 22 películas
     producidas (más un Cortometraje).
     6 de sus películas son las más taquilleras del cine japonés y 5 han sido
     nominadas al Óscar, ganando el de mejor película de animación El viaje de Chihiro.
     Los personajes del estudio son muy peculiares, llenos de aspiraciones, emociones
-    y objetivos. Aquí te dejo con todas las películas de Studio Ghibli ordenadas cronologicamente.
+    y objetivos.
+ 
   </div>
 
+  <div class="ImgPersonajes">
+    <img src="images/Flowergif.gif">
 
-  <main>
+  </div>
+</section>
+</section>
+<main>
+<section class="contenedoropciones">
+
+    <div class="opcionesfiltros">
     <!-- Search -->
     <div class="input-selector filter">
       <label for="search">
@@ -46,26 +54,33 @@
     <!--Ordenar peliculas fecha de realizacion-->
     <div class="ordenarFilms">
       <select name="orderFilms" id="orderFilms">
-        <option value="">Ordenar por:</option>
-        <option id="mas antiguas" value="1">Mas antiguas</option>
-        <option id="mas nuevas" value="2">Mas recientes</option>
+        <option value="">Orden Cronologico:</option>
+        <option id="mas antiguas" value="0-9">Mas antiguas</option>
+        <option id="mas nuevas" value="9-0">Mas recientes</option>
       </select>
     </div>
 
-    <!--Ordenar peliculas por orden alabetico-->
+    <!--Ordenar peliculas por orden alfabetico-->
     <div>
       <select name="orderAZ-ZA" id="sortAZ" class="sortZA">
-        <option value="">Ordenar por:</option>
+        <option value="">Orden Alfabetico:</option>
         <option value="A-Z">Titulo de la A-Z</option>
         <option value="Z-A">Titulo de la Z-A</option>
       </select>
     </div>
+    </div>
+  </section>
+<!--Crear boton para refrescar pagina-->
 
-   <!-- Container all films -->
+ <button class="inicio" id="inicio">Inicio</button>
+
+<!--Container Films-->
     <section class="containerFilms">
-      <div id="showAllFilms"></div> <!-- Show all movies -->
+      <section class="section-films">
+      
+      <div class="cards" id="showAllFilms"></div> <!-- Show all movies -->
     </section>
-
+    </section>
   </main>
 
 

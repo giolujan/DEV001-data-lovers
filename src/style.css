@@ -1,42 +1,50 @@
 body {
-    background-color: whitesmoke;
+    background-image: url();
 }
 
 /*titulo*/
+
+.header {
+  height: 700px;
+  background-image: url(images/imgpersonajes.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.header img{
+  width: 300px;
+  margin-left: 5rem;
+}
+
 h1 {
-    text-align: center;
-    font-family: Helvetica, sans-serif;
-    font-size: 25pt;
-    font-weight: black;
-    text-decoration: underline;
+  text-align: center;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 40px;
+  font-weight: black;
+  text-decoration: underline;
+  background: green;
+  height: 60px;
+  width: 100%;
+
 }
+/*.fondofilmes{
+    background-image: url(./images/elcastilloambulante5.png);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    z-index: -1;
+  }*/
+  
 
-/*.introduccion-btn .btn-abrir-introduccion{
-
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    line-height: 20px;
-   background: url(images/icono\ cruz.jpeg);
-    color: rgb(117, 18, 18);
-    position: relative;
-    top: -25px;
-    border-radius: 100%;
-    box-shadow: -5px 4px 8px rgba(24, 56, 182, 0.4);
-    padding: 5px;
-    transition: all .2s ease;
-    border: none;
-    cursor: pointer;
-    position: center;
-}
-
-.introduccion-btn .btn-abrir-introduccion:hover{
-    background: #1050b1;
-}
-
-.introduccion-btn .btn-abrir-introduccion.active{
-    transform: rotate(45deg);
-}*/
 
 
 /*Imagen logotipo*/
@@ -46,15 +54,59 @@ h1 {
     margin: 0 auto;
 }
 
-/*introduccion encabezado*/
+/*introduccion encabezado
 .introduccion {
     text-align: center;
     font-family: Helvetica, sans-serif;
     font-size: 15pt;
     display: flex;
-    padding: 5% 20%;
+    padding: 5% 20%;*/
+
+
+/*}*/
+.encabezado{
+    padding-top: 80px;
+    padding-left: 54px;
+    display: flex;
+    flex-direction: row;
 }
 
+.introduccion {
+    width: 40%;
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+    padding: 40px;
+    line-height: 250%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.ImgPersonajes{
+    width: 60%;
+    max-width: 100px;
+    max-height: 100px;
+    margin-left: 80px;
+    display: inline-block;
+    vertical-align: top;
+}
+.contenedoropciones{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 8px 8px 5px rgb(0 0 0 / 15%);
+    border-radius: 20px;
+    height: 60px;
+    width:  75.5vw;
+    margin: 4vh auto;
+  }
+  .opcionesfiltros{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 
 
 .containerFilms {
@@ -75,10 +127,12 @@ h1 {
 }
 
 .card {
-    background-color: azure;
+    width: 200px;
+    height: 470px;
+    background-color: rgba(255, 255, 255, 0.644);
     max-width: 200px;
     border-radius: 5%;
-    box-shadow: 0 0 12px #d7d7d7;
+    box-shadow: 0px 0px 25px #d7d7d7;
 }
 
 .card>img {
@@ -105,7 +159,7 @@ h1 {
     font-weight: bold;
     font-size: 12pt;
     color: azure;
-    margin: 0%;
+    margin: 5%;
     background-color: black;
     text-align: center;
 }
@@ -115,3 +169,158 @@ h1 {
     margin: 5%;
     text-align: left;
 }
+
+/*--- Nueva Pantalla---*/
+.articleNewS{
+    display: flex;
+    width: 100vw;
+    padding-top: 40px;
+}
+.infoPeliculas{
+  padding: 30px;
+  height: 86vh;
+  display: flex;
+  flex-direction: column;
+  float:left;
+  background: #ececec;
+  border-radius: 30px;
+  width: auto;
+}
+.asideP{
+  font-family: 'Nunito', sans-serif;
+  color: rgb(104, 135, 192);
+}
+.boxAside{
+  padding: 10px;
+}
+.titleNewScreen{
+  font-family: 'Nunito', sans-serif;
+  color: cornflowerblue;
+  font-size: 25px;
+  text-align: center;
+}
+.mainSection{
+  padding: 15px;
+}
+
+.Description{
+  padding: 25px;
+  border-radius: 20px;
+  background-color: #ececec;
+}
+/* Descripcion Pelis*/
+.subTitleBox{
+    font-family: 'Nunito', sans-serif;
+    color: cornflowerblue;
+    font-size: 22px;
+    text-align: left;
+    padding-bottom: 10px;
+  }
+  .fontF{
+    font-family: 'Nunito', sans-serif;
+    color: rgb(101, 126, 172);
+  }
+
+  /* Contenedor Personajes */
+.ContainerPersonajes{
+    grid-area: peopleSection;
+    border-radius: 2%;
+    background-color: #ececec;
+    padding: 20px 20px 20px 60px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:"subTitlePeople subTitlePeople";
+  }
+  h3{
+    grid-area: subTitlePeople;
+    font-family: 'Nunito', sans-serif;
+    color: cornflowerblue;
+    font-size: 23px;
+  }
+  .tarjeta-wrap{
+    margin: 10px;
+    -webkit-perspective: 800;
+    perspective: 800;
+  }
+  .tarjeta{
+    border-radius: 5%;
+    width: 206px;
+    height: 225px;
+    background: cornsilk;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .7s ease;
+    box-shadow: 8px 8px 5px rgb(0 0 0 / 15%);
+   
+  }
+  .adelante, .atras{
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .adelante{
+    width: 100%;
+    background: #1b9bff;
+  }
+  .atras{
+    transform: rotateY(180deg);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0082e6;
+    background: rgba(223,234,241,0.7) 0;
+  }
+  .tarjeta-wrap:hover .tarjeta{
+    border-radius: 5%;
+    transform: rotateY(180deg);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0082e6;
+  }
+  .imgDesignCard{
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    width: 100%;
+    height: 83%;
+    object-fit: cover;
+  }
+  .designNameCard{
+    padding: 8px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+  }
+  .decriptionCharacters{
+    display: flex;
+    flex-direction: column;
+  }
+  .spanDescription{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+  }
+  p{
+    font-family: 'Nunito', sans-serif;
+  }
+  
+footer{
+    font-size: x-large;
+    background: pink;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        padding: 10px 0;
+    }
