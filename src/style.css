@@ -1,97 +1,109 @@
-body {
-    background-image: url();
+*{
+  
+  margin: 0;
+  padding: 0;
 }
 
-/*titulo*/
+.Allcontainer{
 
-.header {
-  height: 700px;
-  background-image: url(images/imgpersonajes.png);
+  display: flex;
+  flex-wrap: wrap;
+}
+.containerAll{
+  flex: 1;
+  min-width: 250px;
+}
+/*barra gris*/
+.grisHeader{
+  background: #bceeff;
+  height: 70px;
+  width: 100%;
+}
+
+/* Images personajes con encabezado*/
+.imgPerson{
+  height: 150px;
+  background-image: url(images/headerghibli.png.jpg);
   background-size: contain;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.header img{
-  width: 300px;
-  margin-left: 5rem;
-}
-
-h1 {
-  text-align: center;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 40px;
-  font-weight: black;
-  text-decoration: underline;
-  background: green;
-  height: 60px;
-  width: 100%;
-
-}
-/*.fondofilmes{
-    background-image: url(./images/elcastilloambulante5.png);
-    background-position: center center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    position: absolute;
-    max-width: 100%;
-    max-height: 100%;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    z-index: -1;
-  }*/
+  background-attachment:fixed;
+  margin-top: 1px;
+  margin-bottom: 1px;
   
 
-
-
-/*Imagen logotipo*/
-#StudiosG {
-    display: flex;
-    width: 300px;
-    margin: 0 auto;
 }
 
-/*introduccion encabezado
-.introduccion {
-    text-align: center;
-    font-family: Helvetica, sans-serif;
-    font-size: 15pt;
-    display: flex;
-    padding: 5% 20%;*/
-
-
-/*}*/
-.encabezado{
-    padding-top: 80px;
-    padding-left: 54px;
-    display: flex;
-    flex-direction: row;
+.header img {
+  width: 130px;
+  margin-left: 1rem;
+ 
 }
 
+/*logo totoro*/
+.logo-header{
+  display: flex;
+  float:left;
+  padding: 8px;
+  width: 100px;
+  margin-left: 1px;
+}
+
+
+/*Boton inicio refresh*/
+.inicio{
+  display: flex;
+  float: right;
+  padding: 3px;
+  margin-right: 15px;
+  margin-top: 15px;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  font-size: x-large ;
+  font-weight: bold;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  transition: .4s;
+}
+.inicio:hover {
+  box-shadow: 3px 3px 10px 10px  #8a9597;
+}
+
+/*body*/
+body{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+
+/*Introduccion de Studios Ghibli*/
+.informationHeader{
+  background-color:#bceeff;
+  border-radius: 15%;
+  margin-top: 0;
+}
+.encabezado {
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    color: black;
+    justify-content: center;
+}
 .introduccion {
-    width: 40%;
-    font-size: 20px;
+  display: flex;
+  justify-content: center;
+    width: 50%;
+    font-size: 16px;
     color: #000;
     font-weight: bold;
-    padding: 40px;
-    line-height: 250%;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
+   list-style: none;
+    font-family:Arial, Helvetica, sans-serif
 }
-.ImgPersonajes{
-    width: 60%;
-    max-width: 100px;
-    max-height: 100px;
-    margin-left: 80px;
-    display: inline-block;
-    vertical-align: top;
-}
-.contenedoropciones{
+
+/*Contenedor de filtros*/
+/*.contenedoropciones{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content:space-around;
     align-items: center;
     background-color: white;
     cursor: pointer;
@@ -107,8 +119,41 @@ h1 {
     flex-direction: row;
     justify-content: space-evenly;
   }
+*/
+/* Seccion de botones de filtrado*/
+.filmsContainer{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: whitesmoke ;
+  box-shadow: 8px 8px 5px rgb(0 0 0 / 15%);
+  border-radius: 6px;
+  height: 60px;
+  width:  84.5vw ;
+  margin: 4vh auto;
+}
+.opcionesfiltros{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.orderCron, .sortZA, .inputSearch{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  border: 3px solid transparent;
+  transition: .3s ease-in-out;
+  font-size: 15px;
+  font-weight: bold;
+  border-width: 0px 0px 3px 0px;
+  border-color: black;
+  outline: none;
+  padding: 4px 0;
+}
 
 
+/*Contenedor de Peliculas*/
 .containerFilms {
     justify-content: center;
 }
@@ -117,22 +162,31 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
+    flex-grow: 1;
 }
-
-#showAllFilms div {
+/*.card {
     width: 200px;
     margin: 30px 30px;
     justify-content: center;
     flex-grow: 1;
 }
-
-.card {
+/*Cada pelicula*/
+/*.card {
     width: 200px;
     height: 470px;
-    background-color: rgba(255, 255, 255, 0.644);
+    background-color:#E3E4E5 ;
     max-width: 200px;
-    border-radius: 5%;
+    border-radius: 10%;
     box-shadow: 0px 0px 25px #d7d7d7;
+}*/
+.card {
+  margin: 30px 30px;
+  justify-content: center;
+  width: 200px;
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.644);
+  border-radius: 5%;
+  box-shadow: 0px 0px 25px #d7d7d7;
 }
 
 .card>img {
@@ -141,20 +195,17 @@ h1 {
     object-fit: cover;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
+    border: #000;
     filter: brightness(70%);
-
-
 }
 
 .card>img:hover {
     filter: brightness(100%);
 }
-
 .card>p {
     font-family: Helvetica, sans-serif;
     padding: 2px 3px;
 }
-
 .films-titles {
     font-weight: bold;
     font-size: 12pt;
@@ -163,101 +214,125 @@ h1 {
     background-color: black;
     text-align: center;
 }
-
+/*Texto de cada pelicula*/
 .subTitleCard {
     font-size: 10pt;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 5%;
     text-align: left;
 }
 
-/*--- Nueva Pantalla---*/
+/* Nueva Pantalla Click en cada pelicula*/
 .articleNewS{
-    display: flex;
-    width: 100vw;
-    padding-top: 40px;
+  display: flex;
+  padding: 20px 50px;
 }
 .infoPeliculas{
-  padding: 30px;
-  height: 86vh;
+  margin: 10px;
+  padding: 15px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   float:left;
   background: #ececec;
-  border-radius: 30px;
+  border-radius: 25px;
   width: auto;
 }
 .asideP{
-  font-family: 'Nunito', sans-serif;
-  color: rgb(104, 135, 192);
+  font-family: Arial, Helvetica, sans-serif;
+  color:  rgb(104, 135, 192);
 }
 .boxAside{
+  width: 250px;
+  margin: 20px 20px;
   padding: 10px;
 }
-.titleNewScreen{
-  font-family: 'Nunito', sans-serif;
+h2, .titleNewScreen, .subTitleLocation, 
+.subTitleVehicles, .subTitlePersonajes,
+ .subTitleBox, .subTitleError{
+  font-family: Arial, Helvetica, sans-serif;
   color: cornflowerblue;
   font-size: 25px;
   text-align: center;
 }
+
 .mainSection{
-  padding: 15px;
+  margin: 0;
+  padding: 0;
 }
 
-.Description{
-  padding: 25px;
+/*.sectionLocation{
+  padding: 15px;
   border-radius: 20px;
+  background-color: #E3E4E5;
+}
+.sectionVehicles{
+  padding: 15px;
+  border-radius: 20px;
+  background-color: #E3E4E5;
+  margin: 20px;
+}*/
+
+.Description{
+  margin: 10px;
+  padding: 15px;
+  border-radius: 25px;
   background-color: #ececec;
 }
+
+/* ------- */
+.errorVehicles, .errorLocations{
+  height: 120px;
+  width: 90px;
+  border-radius: 9%;
+  object-fit: cover;
+}
+/* ------- */
 /* Descripcion Pelis*/
 .subTitleBox{
-    font-family: 'Nunito', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: cornflowerblue;
     font-size: 22px;
     text-align: left;
     padding-bottom: 10px;
   }
   .fontF{
-    font-family: 'Nunito', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: rgb(101, 126, 172);
   }
 
   /* Contenedor Personajes */
-.ContainerPersonajes{
-    grid-area: peopleSection;
-    border-radius: 2%;
+  .ContainerPersonajes{
+    margin: 10px;
+    padding: 15px;
     background-color: #ececec;
-    padding: 20px 20px 20px 60px;
-    margin: 20px auto;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas:"subTitlePeople subTitlePeople";
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
   }
+  
   h3{
-    grid-area: subTitlePeople;
     font-family: 'Nunito', sans-serif;
     color: cornflowerblue;
-    font-size: 23px;
+    font-size: 22px;
+    text-align: left;
+    margin: 10px 100% 0px 10px;
   }
   .tarjeta-wrap{
     margin: 10px;
-    -webkit-perspective: 800;
-    perspective: 800;
+  
   }
   .tarjeta{
-    border-radius: 5%;
-    width: 206px;
-    height: 225px;
-    background: cornsilk;
+    width: 200px;
+    height: 200px;
     position: relative;
     transform-style: preserve-3d;
     transition: .7s ease;
     box-shadow: 8px 8px 5px rgb(0 0 0 / 15%);
-   
   }
   .adelante, .atras{
-    border-radius: 5%;
+    border-radius: 10%;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -271,40 +346,37 @@ h1 {
     background: #1b9bff;
   }
   .atras{
+    border-radius: 10%;
     transform: rotateY(180deg);
-    padding: 15px;
     display: flex;
-    justify-content: center;
     align-items: center;
     color: #0082e6;
     background: rgba(223,234,241,0.7) 0;
   }
+  
   .tarjeta-wrap:hover .tarjeta{
-    border-radius: 5%;
+    border-radius: 10%;
     transform: rotateY(180deg);
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: #0082e6;
+    background: rgba(223,234,241,0.7) 0;
   }
+
   .imgDesignCard{
-    border-bottom-left-radius: 5%;
-    border-bottom-right-radius: 5%;
-    width: 100%;
-    height: 83%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    width: 200px;
+    height: 180px;
     object-fit: cover;
   }
   .designNameCard{
-    padding: 8px;
-    font-size: 20px;
+    padding: 5px;
+    font-size: 18px;
     text-align: center;
     color: #fff;
     font-family: 'Nunito', sans-serif;
   }
   .decriptionCharacters{
-    display: flex;
-    flex-direction: column;
+    margin: 25px;
   }
   .spanDescription{
     font-size: 16px;
@@ -315,12 +387,38 @@ h1 {
     font-family: 'Nunito', sans-serif;
   }
   
+  .sectionVehicles {
+    margin: 10px;
+    padding: 15px;
+    background-color: #ececec;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+  
+  .sectionLocation {
+    margin: 10px;
+    padding: 15px;
+    background-color: #ececec;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+
+  
+ 
+/* FOOTER */
+
 footer{
     font-size: x-large;
-    background: pink;
+    background: #bceeff;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         bottom: 0;
         width: 100%;
         margin: 0;
         padding: 10px 0;
     }
+
+   

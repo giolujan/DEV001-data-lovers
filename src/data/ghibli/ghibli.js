@@ -1865,7 +1865,7 @@ export default {
       "description": "14-year-old Arrietty and the rest of the Clock family live in peaceful anonymity as they make their own home from items 'borrowed' from the house's human inhabitants. However, life changes for the Clocks when a human boy discovers Arrietty.",
       "director": "Hiromasa Yonebayashi",
       "producer": "Toshio Suzuki",
-      "poster": "https://fesapusewebsite.blob.core.windows.net/fathom/arr3-3aec6b72aadf45906c7dc5edac89eb54.jpg",
+      "poster": "https://www.encadenados.org/rdc/images/stories/rashomon/num_83/arrietty-1.jpg",
       "release_date": "2010",
       "rt_score": "95",
       "people": [

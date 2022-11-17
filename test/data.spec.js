@@ -29,7 +29,7 @@ describe('getFilm', () => {
   });
   
 
-    let dataGhibli= [
+    let dataGhibli= {films: [
           {id: "2baf70d1-42bb-4437-b551-e5fed5a87abe"},
           {title: "Castle in the Sky"},
           {director: "Hayao Miyazaki"},
@@ -37,7 +37,7 @@ describe('getFilm', () => {
           {poster: "https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg"},
           {release_date: "1986"},
           {rt_score: "95"},
-        ];
+        ]};
         
         let resultadoDataGhibli= [
           {id: "2baf70d1-42bb-4437-b551-e5fed5a87abe"},

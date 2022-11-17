@@ -3,89 +3,116 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
+
 </head>
 
 <body>
-  <div id="root"></div>
-  <header class="header">
+  <main></main>
+  <section class="Allcontainer"> 
+<section class="ContainerAll">
+    <header class="header">
+      <div class="imgheader">
+      <!---- <nav>-->
+<section class="grisHeader">
+          <!--Logotipo studios Ghibli-->
+          <div class="logo-header">
+            <img src="images/LogoStudio.png">
+          </div>
+
+
+          <!--Crear boton para refrescar pagina-->
+          <button class="inicio" id="inicio">Regresar al Inicio</button>
+     
+  
+         
+        </section>
+        <!--</nav>-->
+      </div>
+      <div class="imgPerson"></div>
+      </header>
    
-  </header>
-  <h1>STUDIOS GHIBLI</h1>
-  <div class="imageStudiosG" id="StudiosG">
-    <img src="images/ghibli_logo_gold.png" class="inicio">
-  </div>
-<div class="fondofilmes"></div>
- 
+
+   
 
 
-<section class="informationHeader">
-<section class="encabezado">
-  <div class="introduccion">
-    
-    Studio Ghibli es un estudio de animación japonés, reconocido como uno
-    de los mejores estudios del género de animación en el cine, tiene un total de 22 películas
-    producidas (más un Cortometraje).
-    6 de sus películas son las más taquilleras del cine japonés y 5 han sido
-    nominadas al Óscar, ganando el de mejor película de animación El viaje de Chihiro.
-    Los personajes del estudio son muy peculiares, llenos de aspiraciones, emociones
-    y objetivos.
- 
-  </div>
+    <!---- <div class="imageStudiosG" id="StudiosG">
+      <img src="images/ghibli_logo_gold.png" class="inicio">
+    </div>-->
 
-  <div class="ImgPersonajes">
-    <img src="images/Flowergif.gif">
+    <section class="informationHeader">
+      <section class="encabezado">
+        <div class="introduccion">
+          Studio Ghibli es un estudio de animación de origen japonés, 
+          su principal característica de es su forma de retratar la naturaleza, una naturaleza 
+          que no se subordina a las personas ni a los personajes: “Las relaciones humanas no son lo único
+           interesante; todos los elementos del mundo encierran belleza: el paisaje, el clima, el tiempo, 
+           la luz, la vegetación, el agua, el viento… 
+<br>
+          Aquí encontrarás las peliculas con toda su información.
 
-  </div>
+        </div>
+
+      </section>
+    </section>
+   
+
+    <!-- ------------------------------Pagina Personaje-------------------------------- -->
+
+    <section class="FilmsGhibli">
+
+      <section class="contenedoropciones">
+        <div class="opcionesfiltros">
+          <nav class="filmsContainer">
+
+            <!-- Search -->
+            <div class="input-header">
+              <input type="text" id="searchFilm" class="inputSearch" placeholder="Search...">
+            </div>
+
+          
+
+          <!--Ordenar peliculas fecha de realizacion-->
+          <div class="ordenarFilms">
+            <select name="orderFilms" id="orderFilms" class="orderCron">
+              <option value="">Orden Cronologico:</option>
+              <option id="mas antiguas" value="0-9">Mas antiguas</option>
+              <option id="mas nuevas" value="9-0">Mas recientes</option>
+            </select>
+          </div>
+
+          <!--Ordenar peliculas por orden alfabetico-->
+          <div>
+            <select name="orderAZ-ZA" id="sortAZ" class="sortZA">
+              <option value="">Orden Alfabetico:</option>
+              <option value="A-Z">Titulo de la A-Z</option>
+              <option value="Z-A">Titulo de la Z-A</option>
+            </select>
+          </div>
+
+        </nav>
+        </div>
+      </section>
+
+      <!--Container Films-->
+      <section class="containerFilms">
+        <section class="section-films">
+
+          <div class="cards" id="showAllFilms"></div> <!-- Show all movies -->
+        </section>
+      </section>
+
+
+      <footer>Proyecto Data Lovers creado por Andy y Guio para Laboratoria DEV001
+       
+      </footer>
+
+    </section>
 </section>
-</section>
-<main>
-<section class="contenedoropciones">
-
-    <div class="opcionesfiltros">
-    <!-- Search -->
-    <div class="input-selector filter">
-      <label for="search">
-      </label>
-      <input type="text" id="searchFilm" class="inputSearch" placeholder="Search...">
-    </div>
-
-    <!--Ordenar peliculas fecha de realizacion-->
-    <div class="ordenarFilms">
-      <select name="orderFilms" id="orderFilms">
-        <option value="">Orden Cronologico:</option>
-        <option id="mas antiguas" value="0-9">Mas antiguas</option>
-        <option id="mas nuevas" value="9-0">Mas recientes</option>
-      </select>
-    </div>
-
-    <!--Ordenar peliculas por orden alfabetico-->
-    <div>
-      <select name="orderAZ-ZA" id="sortAZ" class="sortZA">
-        <option value="">Orden Alfabetico:</option>
-        <option value="A-Z">Titulo de la A-Z</option>
-        <option value="Z-A">Titulo de la Z-A</option>
-      </select>
-    </div>
-    </div>
   </section>
-<!--Crear boton para refrescar pagina-->
-
- <button class="inicio" id="inicio">Inicio</button>
-
-<!--Container Films-->
-    <section class="containerFilms">
-      <section class="section-films">
-      
-      <div class="cards" id="showAllFilms"></div> <!-- Show all movies -->
-    </section>
-    </section>
-  </main>
-
-
-  <footer>Proyecto Data Lovers creado por Guiomara y Andrea para Laboratoria DEV001</footer>
-
   <script src="main.js" type="module"></script>
 </body>
 

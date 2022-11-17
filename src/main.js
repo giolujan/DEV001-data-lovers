@@ -97,11 +97,12 @@ const showFilmInScreen = (arrayData) => {
 <p class="asideP"><span class="spanDescription">Productor:</span> ${element.producer}</p> 
 <p class="asideP"><span class="spanDescription">Fecha de realizacion: </span>${element.release_date}</p>
 <p class="asideP"><span class="spanDescription">Score: </span>${element.rt_score}</p></div>`;
+`<div class="Description"><h3 class="subTitleBox">Descripcion:</h3> <p class="fontF">${element.description}</p></div>`;
 //Crear una seccion para indicar que es una seccion aparte y ponerle el titulo del contenedor siguiente con
 //un H"""
       const mainSection = document.createElement("section");
       mainSection.classList.add("mainSection");
-      mainSection.innerHTML = `<div class="Description"><h2 class="subTitleBox">Descripcion:</h2> <p class="fontF">${element.description}</p></div>`;
+      mainSection.innerHTML = `<div class="Description"><h3 class="subTitleBox">Descripcion:</h3> <p class="fontF">${element.description}</p></div>`;
 
       //Crear contenedor para todos los personajes con un elemento html section y un classlist diciendole que
       //queremos los personajes en una lista
@@ -150,7 +151,7 @@ console.log(character)
  const vehicles = element.vehicles;
  if(vehicles.length === 0){
   // Si no se encuentra ningun dato mostrar imagen con mensaje de error
-   containerVehicles.innerHTML=`<h2 class="subTitleError">Vehicles:</h2> <div class="addFlexError"> No se encuentran vehiculos.<img class="errorVehicles"src="images/Not Found.png"></div>`;
+   containerVehicles.innerHTML=`<h2 class="subTitleError">Vehicles:</h2> <div class="addFlexError"> No se encuentran vehiculos.<img class="errorVehicles"src="images/NotFound2.jpeg"></div>`;
  }else{
    for (let i = 0; i < vehicles.length; i++) {
      containerVehicles.innerHTML+=`
@@ -183,7 +184,7 @@ console.log(character)
   const locations = element.locations;
   if(locations.length === 0){
     //Si no se encuentra ningun dato mostrar imagen con mensaje de error
-    containerLocations.innerHTML=`<h2 class="subTitleError">Locaciones:</h2> <div class="addFlexError"> No se encuentran Locaciones.<img class="errorVehicles"src="images/Not Found.png"></div>`;
+    containerLocations.innerHTML=`<h3 class="subTitleError">Locaciones:</h3> <div class="addFlexError"> No se encuentran Locaciones.<img class="errorLocations"src="images/NotFound2.jpeg"></div>`;
   }else{
     for (let i = 0; i < locations.length-1; i++) {
       containerLocations.innerHTML+=`
