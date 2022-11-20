@@ -15,7 +15,6 @@ export const searchFilms = (data, condition, value) => {
 };
 
 //Funcion ordenar por fecha
-
 export const orderFilms = (data, select) => {
   if (select === "0-9") {
     return data.sort((a, b) => parseInt(a.release_date) > parseInt(b.release_date) ? 1 : -1);
@@ -36,4 +35,5 @@ export const ordenaFilms = (data, select) => {
   }
   return data;
 };
+
 

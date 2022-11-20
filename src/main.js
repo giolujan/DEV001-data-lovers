@@ -9,7 +9,6 @@ const deleteNodo = (showFilms) => {
     showFilms.removeChild(showFilms.lastChild);
   }
 }
-
 //Funcion input search con evento keyup para buscar pelicula desde una primera presion de letra por titulo
 const inputSearch = document.getElementById("searchFilm");
 let allDataFilms = getFilm(data);
@@ -106,7 +105,6 @@ const showFilmInScreen = (arrayData) => {
       getPersonajes.classList.add("boxAllCharacters");
 
       //funcion (bucle) que devuelva un array para traer a todos los personajes y su info, puede ser un bucle For
-
       const character = element.people;
       //Recordar que se inicia (indexa) desde cero y nuestro array es character y queremos extraer subarrays de people
       for (let i = 0; i < character.length - 1; i++) {
@@ -196,7 +194,6 @@ const showFilmInScreen = (arrayData) => {
       datosPeli.append(asideSection, mainSection);
       containerPersonajes.append(getPersonajes);
       mainSection.append(containerPersonajes, containerVehicles, containerLocations);
-
     }
   });
 };

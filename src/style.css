@@ -167,12 +167,10 @@ body {
 .card>img:hover {
   filter: brightness(100%);
 }
-
 .card>p {
   font-family: Helvetica, sans-serif;
   padding: 2px 3px;
 }
-
 .films-titles {
   font-weight: bold;
   font-size: 12pt;
