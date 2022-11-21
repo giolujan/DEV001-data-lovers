@@ -9,51 +9,40 @@ const deleteNodo = (showFilms) => {
     showFilms.removeChild(showFilms.lastChild);
   }
 }
- 
 //Funcion input search con evento keyup para buscar pelicula desde una primera presion de letra por titulo
 const inputSearch = document.getElementById("searchFilm");
 let allDataFilms = getFilm(data);
 inputSearch.addEventListener('keyup', () => {
   allDataFilms = searchFilms(filmsGhibli, 'title', inputSearch.value);
   showFilmInScreen(allDataFilms);
-})
-console.log(inputSearch);
+});
 
 //Funcion para ordenar peliculas por fecha de realizacion mediante evento change y sort en data.js
 const order = document.getElementById("orderFilms")
 order.addEventListener("change", (event) => {
   const selectOrder = event.target.value;
-  console.log(selectOrder)
   if (selectOrder !== "") {
     const filterOrder = orderFilms(allDataFilms, selectOrder);
     showFilmInScreen(filterOrder);
   }
-}
-)
-console.log(order);
-
+})
 
 //Crear opcion para Ordenar pelis de la AZ y de la ZA, se crea con sort en data.js y evento change
 const ordena = document.getElementById("sortAZ")
 ordena.addEventListener("change", (event) => {
   const selectOrdena = event.target.value;
-  console.log(selectOrdena)
   if (selectOrdena !== "") {
     const filterOrdena = ordenaFilms(allDataFilms, selectOrdena);
     showFilmInScreen(filterOrdena);
   }
-}
-)
-console.log(ordena);
-
+})
 
 // Boton de inicio para refrescar la pagina y devolver al inicio del contenido con un boton
 //con la funcion reload y un evento click
 let btnInicio = document.querySelector("#inicio");
 btnInicio.addEventListener("click", function () {
   location.reload();
-});
-console.log (btnInicio)
+})
 
 //Crear array para traer la data paso a paso, forEach() 
 //que ejecuta la función callback una vez por cada elemento del array
@@ -83,11 +72,11 @@ const showFilmInScreen = (arrayData) => {
       document.querySelector(".informationHeader").style.display = "none";
       document.querySelector(".contenedoropciones").style.display = "none"
 
-  //Crear una constante para crear contenido independiente a las funciones anteriores, se puede utilizar un article o section de html
+      //Crear una constante para crear contenido independiente a las funciones anteriores, se puede utilizar un article o section de html
       const datosPeli = document.createElement("article");
       datosPeli.classList.add("articleNewS");
-//Se utiliza etiqueta aside que crea contenedor de contenido relacionado al main que en este caso es la descripcion
-//y el contenedor de personajes pero no necesario
+      //Se utiliza etiqueta aside que crea contenedor de contenido relacionado al main que en este caso es la descripcion
+      //y el contenedor de personajes pero no necesario
       const asideSection = document.createElement('aside');
       asideSection.classList.add("infoPeliculas");//Usar classList es una forma práctica de acceder a la lista de clases de un elemento como una cadena de texto delimitada por espacios a través de element
       asideSection.innerHTML = `<h2 class="titleNewScreen">${element.title}</h2>
@@ -97,9 +86,9 @@ const showFilmInScreen = (arrayData) => {
 <p class="asideP"><span class="spanDescription">Productor:</span> ${element.producer}</p> 
 <p class="asideP"><span class="spanDescription">Fecha de realizacion: </span>${element.release_date}</p>
 <p class="asideP"><span class="spanDescription">Score: </span>${element.rt_score}</p></div>`;
-`<div class="Description"><h3 class="subTitleBox">Descripcion:</h3> <p class="fontF">${element.description}</p></div>`;
-//Crear una seccion para indicar que es una seccion aparte y ponerle el titulo del contenedor siguiente con
-//un H"""
+      `<div class="Description"><h3 class="subTitleBox">Descripcion:</h3> <p class="fontF">${element.description}</p></div>`;
+      //Crear una seccion para indicar que es una seccion aparte y ponerle el titulo del contenedor siguiente con
+      //un H"""
       const mainSection = document.createElement("section");
       mainSection.classList.add("mainSection");
       mainSection.innerHTML = `<div class="Description"><h3 class="subTitleBox">Descripcion:</h3> <p class="fontF">${element.description}</p></div>`;
@@ -116,7 +105,6 @@ const showFilmInScreen = (arrayData) => {
       getPersonajes.classList.add("boxAllCharacters");
 
       //funcion (bucle) que devuelva un array para traer a todos los personajes y su info, puede ser un bucle For
-    
       const character = element.people;
       //Recordar que se inicia (indexa) desde cero y nuestro array es character y queremos extraer subarrays de people
       for (let i = 0; i < character.length - 1; i++) {
@@ -139,22 +127,19 @@ const showFilmInScreen = (arrayData) => {
     </div>
   </div>`;
       }
-    
-console.log(character)
+      //Crear contenedor para agregar vehiculos con un section
+      const containerVehicles = document.createElement('section');
+      containerVehicles.classList.add("sectionVehicles");
+      containerVehicles.innerHTML = `<h3 class="subTitleVehicles">Vehicles: </h3>`;
 
-//Crear contenedor para agregar vehiculos con un section
- const containerVehicles = document.createElement('section');
- containerVehicles.classList.add("sectionVehicles");
- containerVehicles.innerHTML=`<h3 class="subTitleVehicles">Vehicles: </h3>`;
-
-//Crear funcion para extraer los vehiculos con su info
- const vehicles = element.vehicles;
- if(vehicles.length === 0){
-  // Si no se encuentra ningun dato mostrar imagen con mensaje de error
-   containerVehicles.innerHTML=`<h2 class="subTitleError">Vehicles:</h2> <div class="addFlexError"> No se encuentran vehiculos.<img class="errorVehicles"src="images/NotFound2.jpeg"></div>`;
- }else{
-   for (let i = 0; i < vehicles.length; i++) {
-     containerVehicles.innerHTML+=`
+      //Crear funcion para extraer los vehiculos con su info
+      const vehicles = element.vehicles;
+      if (vehicles.length === 0) {
+        // Si no se encuentra ningun dato mostrar imagen con mensaje de error
+        containerVehicles.innerHTML = `<h2 class="subTitleError">Vehicles:</h2> <div class="addFlexError"> No se encuentran vehiculos.<img class="errorVehicles"src="images/NotFound2.jpeg"></div>`;
+      } else {
+        for (let i = 0; i < vehicles.length; i++) {
+          containerVehicles.innerHTML += `
      <div class="tarjeta-wrap">
        <div class="tarjeta">
          <div class="adelante">
@@ -170,24 +155,23 @@ console.log(character)
          </div>
        </div>
      </div>`;
-   }
- }
- console.log(containerVehicles)
+        }
+      }
 
- //Crear contenedor para agregar Locaciones con un section
- 
-  const containerLocations = document.createElement('section');
-  containerLocations.classList.add("sectionLocation")
+      //Crear contenedor para agregar Locaciones con un section
 
-  //Crear funcion para extraer las locaciones con su info
-  containerLocations.innerHTML=`<h3 class="subTitleLocation">Locaciones:</h3>`;
-  const locations = element.locations;
-  if(locations.length === 0){
-    //Si no se encuentra ningun dato mostrar imagen con mensaje de error
-    containerLocations.innerHTML=`<h3 class="subTitleError">Locaciones:</h3> <div class="addFlexError"> No se encuentran Locaciones.<img class="errorLocations"src="images/NotFound2.jpeg"></div>`;
-  }else{
-    for (let i = 0; i < locations.length-1; i++) {
-      containerLocations.innerHTML+=`
+      const containerLocations = document.createElement('section');
+      containerLocations.classList.add("sectionLocation")
+
+      //Crear funcion para extraer las locaciones con su info
+      containerLocations.innerHTML = `<h3 class="subTitleLocation">Locaciones:</h3>`;
+      const locations = element.locations;
+      if (locations.length === 0) {
+        //Si no se encuentra ningun dato mostrar imagen con mensaje de error
+        containerLocations.innerHTML = `<h3 class="subTitleError">Locaciones:</h3> <div class="addFlexError"> No se encuentran Locaciones.<img class="errorLocations"src="images/NotFound2.jpeg"></div>`;
+      } else {
+        for (let i = 0; i < locations.length - 1; i++) {
+          containerLocations.innerHTML += `
       <div class="tarjeta-wrap">
         <div class="tarjeta">
           <div class="adelante">
@@ -204,17 +188,13 @@ console.log(character)
           </div>
         </div>
       </div>`;
-    }
-  }
-  console.log(containerLocations)
+        }
+      }
       showAllFilms.append(datosPeli);
       datosPeli.append(asideSection, mainSection);
       containerPersonajes.append(getPersonajes);
       mainSection.append(containerPersonajes, containerVehicles, containerLocations);
-    
     }
   });
 };
 showFilmInScreen(filmsGhibli);
-console.log(showFilmInScreen)
-

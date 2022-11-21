@@ -11,6 +11,19 @@ y descripción, al igual que los vehiculos y locaciones de cada película, todo 
 contenedores independientes.También se incluyó un botón que retorna al inicio de la primera página, 
 éste se encuentra en la parte superior y es muy visible. 
 Para éste proyecto se tomaron 4 historias de Usuario.
+1. Preambulo
+Se realizó una página Fandom de Studio Ghibli, donde se puede observar
+un encabezado de imagen donde se muestran la mayoría de los personajes 
+principales, luego una breve introducción de lo que es Studio Ghibli.
+Luego al hacer Scroll se observan las portadas de cada pelicula y sus datos
+filmográficos, esto fue posible gracias a que se importó la data de estos elementos
+inicialmente. Cada una de las peliculas se pueden ordenar por orden alfabético, cronológico y se puede
+buscar por título desde la primera tecla presionada. Luego al hacer Click en cada pelicula se abre una 
+segunda página donde se muestra el resumen de cada película, los personajes, con su imagen 
+y descripción, al igual que los vehiculos y locaciones de cada película, todo esto se ordena en 
+contenedores independientes.También se incluyó un botón que retorna al inicio de la primera página, 
+éste se encuentra en la parte superior y es muy visible. 
+Para éste proyecto se tomaron 4 historias de Usuario.
 
 ## 2.Historias de Usuario.
 
