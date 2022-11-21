@@ -11,6 +11,7 @@ y descripción, al igual que los vehiculos y locaciones de cada película, todo 
 contenedores independientes.También se incluyó un botón que retorna al inicio de la primera página, 
 éste se encuentra en la parte superior y es muy visible. 
 Para éste proyecto se tomaron 4 historias de Usuario.
+[![110594146-studioghiblifilmcollage.jpg](https://i.postimg.cc/HsT8XCq2/110594146-studioghiblifilmcollage.jpg)](https://postimg.cc/vDSmwCHg)
 
 ## 2.Historias de Usuario.
 
@@ -46,7 +47,6 @@ modificando segun fuera necesario, nuestro checklist está terminado.
 ## 7.Diseño final del producto.
 [![Data-Lovers-Proyecto-2-Trello-Google-Chrome-20-11-2022-07-41-07-p-m.png](https://i.postimg.cc/g0VLPZYp/Data-Lovers-Proyecto-2-Trello-Google-Chrome-20-11-2022-07-41-07-p-m.png)](https://postimg.cc/xkd1vqJp)
 [![Data-Lovers-Proyecto-2-Trello-Google-Chrome-20-11-2022-07-41-23-p-m.png](https://i.postimg.cc/26pycdgm/Data-Lovers-Proyecto-2-Trello-Google-Chrome-20-11-2022-07-41-23-p-m.png)](https://postimg.cc/670BTZ91)
-[![Data-Lovers-Proyecto-2-Trello-Google-Chrome-20-11-2022-07-41-31-p-m.png](https://i.postimg.cc/SQ6dGDHS/Data-Lovers-Proyecto-2-Trello-Google-Chrome-20-11-2022-07-41-31-p-m.png)](https://postimg.cc/5jt84qxT)
 
 
 
