@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js" type="module"></script>
+</head>
+
+<body>
+  <section class="Allcontainer">
+    <section class="ContainerAll">
+      <header class="header">
+        <div class="imgheader">
+          <section class="grisHeader">
+            <!--Logotipo studios Ghibli-->
+            <div class="logo-header">
+              <img src="images/LogoStudio.png">
+            </div>
+            <!--Crear boton para refrescar pagina-->
+            <button class="inicio" id="inicio">Regresar al Inicio</button>
+          </section>
+        </div>
+        <div class="imgPerson"></div>
+      </header>
+      <main>
+        <section class="informationHeader">
+          <section class="encabezado">
+            <div class="introduccion">
+              Studio Ghibli es un estudio de animación de origen japonés,
+              su principal característica de es su forma de retratar la naturaleza, una naturaleza
+              que no se subordina a las personas ni a los personajes: “Las relaciones humanas no son lo único
+              interesante; todos los elementos del mundo encierran belleza: el paisaje, el clima, el tiempo,
+              la luz, la vegetación, el agua, el viento…
+              <br>
+              Aquí encontrarás las peliculas con toda su información.
+            </div>
+          </section>
+        </section>
+        <!-- ------------------------------Pagina Personaje-------------------------------- -->
+        <section class="FilmsGhibli">
+          <section class="contenedoropciones">
+            <div class="opcionesfiltros">
+              <nav class="filmsContainer">
+                <!-- Search -->
+                <div class="input-header">
+                  <input type="text" id="searchFilm" class="inputSearch" placeholder="Search...">
+                </div>
+                <!--Ordenar peliculas fecha de realizacion-->
+                <div class="ordenarFilms">
+                  <select name="orderFilms" id="orderFilms" class="orderCron">
+                    <option value="">Orden Cronologico:</option>
+                    <option id="mas antiguas" value="0-9">Mas antiguas</option>
+                    <option id="mas nuevas" value="9-0">Mas recientes</option>
+                  </select>
+                </div>
+                <!--Ordenar peliculas por orden alfabetico-->
+                <div>
+                  <select name="orderAZ-ZA" id="sortAZ" class="sortZA">
+                    <option value="">Orden Alfabetico:</option>
+                    <option value="A-Z">Titulo de la A-Z</option>
+                    <option value="Z-A">Titulo de la Z-A</option>
+                  </select>
+                </div>
+              </nav>
+            </div>
+          </section>
+        </section>
+        <!--Container Films-->
+        <section class="containerFilms">
+          <section class="section-films">
+            <div class="cards" id="showAllFilms"></div> <!-- Show all movies -->
+          </section>
+        </section>
+      </main>
+      <footer>
+        <p> Proyecto Data Lovers creado por Andy y Guio para Laboratoria DEV001 </p>
+      </footer>
+    </section>
+  </section>
+</body>
+
+</html>

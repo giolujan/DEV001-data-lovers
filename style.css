@@ -1,0 +1,389 @@
+* {
+
+  margin: 0;
+  padding: 0;
+}
+
+.Allcontainer {
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.containerAll {
+  flex: 1;
+  min-width: 250px;
+}
+
+/*barra gris*/
+.grisHeader {
+  background: #bceeff;
+  height: 70px;
+  width: 100%;
+}
+
+/* Images personajes con encabezado*/
+.imgPerson {
+  height: 150px;
+  background-image: url(images/headerghibli.png.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.header img {
+  width: 130px;
+  margin-left: 1rem;
+}
+
+/*logo totoro*/
+.logo-header {
+  display: flex;
+  float: left;
+  padding: 8px;
+  width: 100px;
+  margin-left: 1px;
+}
+
+/*Boton inicio refresh*/
+.inicio {
+  display: flex;
+  float: right;
+  padding: 3px;
+  margin-right: 15px;
+  margin-top: 15px;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  font-size: x-large;
+  font-weight: bold;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  transition: .4s;
+}
+
+.inicio:hover {
+  box-shadow: 3px 3px 10px 10px #8a9597;
+}
+
+/*body*/
+body {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+/*Introduccion de Studios Ghibli*/
+.informationHeader {
+  background-color: #bceeff;
+  border-radius: 15%;
+  margin-top: 0;
+}
+
+.encabezado {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  color: black;
+  justify-content: center;
+}
+
+.introduccion {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  padding: 5px;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif
+}
+/* Seccion de botones de filtrado*/
+.filmsContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: whitesmoke;
+  box-shadow: 8px 8px 5px rgb(0 0 0 / 15%);
+  border-radius: 6px;
+  height: 60px;
+  width: 84.5vw;
+  margin: 4vh auto;
+}
+
+.opcionesfiltros {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.orderCron,
+.sortZA,
+.inputSearch {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  border: 3px solid transparent;
+  transition: .3s ease-in-out;
+  font-size: 15px;
+  font-weight: bold;
+  border-width: 0px 0px 3px 0px;
+  border-color: black;
+  outline: none;
+  padding: 4px 0;
+}
+/*Contenedor de las Peliculas*/
+.containerFilms {
+  justify-content: center;
+}
+
+#showAllFilms {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  flex-grow: 1;
+}
+
+.card {
+  margin: 30px 30px;
+  justify-content: center;
+  width: 200px;
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.644);
+  border-radius: 5%;
+  box-shadow: 0px 0px 25px #d7d7d7;
+}
+
+.card>img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border: #000;
+    filter: brightness(70%);
+}
+
+.card>img:hover {
+  filter: brightness(100%);
+}
+.card>p {
+  font-family: Helvetica, sans-serif;
+  padding: 2px 3px;
+}
+.films-titles {
+  font-weight: bold;
+  font-size: 12pt;
+  color: azure;
+  margin: 5%;
+  background-color: black;
+  text-align: center;
+}
+/*Texto de cada pelicula*/
+.subTitleCard {
+  font-size: 10pt;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 5%;
+  text-align: left;
+}
+/* Nueva Pantalla Click en cada pelicula*/
+.articleNewS {
+  display: flex;
+  padding: 20px 50px;
+}
+
+.infoPeliculas {
+  margin: 10px;
+  padding: 15px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  background: #ececec;
+  border-radius: 25px;
+  width: auto;
+}
+
+.asideP {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(104, 135, 192);
+}
+
+.boxAside {
+  width: 250px;
+  margin: 20px 20px;
+  padding: 10px;
+}
+
+h2,
+.titleNewScreen,
+.subTitleLocation,
+.subTitleVehicles,
+.subTitlePersonajes,
+.subTitleBox,
+.subTitleError {
+  font-family: Arial, Helvetica, sans-serif;
+  color: cornflowerblue;
+  font-size: 25px;
+  text-align: center;
+}
+
+.mainSection {
+  margin: 0;
+  padding: 0;
+}
+
+.Description {
+  margin: 10px;
+  padding: 15px;
+  border-radius: 25px;
+  background-color: #ececec;
+}
+
+.errorVehicles,
+.errorLocations {
+  height: 120px;
+  width: 90px;
+  border-radius: 9%;
+  object-fit: cover;
+}
+
+/* Descripcion Pelis*/
+.subTitleBox {
+  font-family: Arial, Helvetica, sans-serif;
+  color: cornflowerblue;
+  font-size: 22px;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.fontF {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(101, 126, 172);
+}
+
+/* Contenedor Personajes */
+.ContainerPersonajes {
+  margin: 10px;
+  padding: 15px;
+  background-color: #ececec;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+h3 {
+  font-family: 'Nunito', sans-serif;
+  color: cornflowerblue;
+  font-size: 22px;
+  text-align: left;
+  margin: 10px 100% 0px 10px;
+}
+
+.tarjeta-wrap {
+  margin: 10px;
+
+}
+
+.tarjeta {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: .7s ease;
+  box-shadow: 8px 8px 5px rgb(0 0 0 / 15%);
+}
+
+.adelante,
+.atras {
+  border-radius: 10%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.adelante {
+  width: 100%;
+  background: #1b9bff;
+}
+
+.atras {
+  border-radius: 10%;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  color: #0082e6;
+  background: rgba(223, 234, 241, 0.7) 0;
+}
+
+.tarjeta-wrap:hover .tarjeta {
+  border-radius: 10%;
+  transform: rotateY(180deg);
+  color: #0082e6;
+  background: rgba(223, 234, 241, 0.7) 0;
+}
+
+.imgDesignCard {
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.designNameCard {
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+}
+
+.decriptionCharacters {
+  margin: 25px;
+}
+
+.spanDescription {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+}
+
+p {
+  font-family: 'Nunito', sans-serif;
+}
+
+.sectionVehicles {
+  margin: 10px;
+  padding: 15px;
+  background-color: #ececec;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.sectionLocation {
+  margin: 10px;
+  padding: 15px;
+  background-color: #ececec;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+footer p {
+  font-size: x-large;
+  background: #bceeff;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+}
