@@ -1,5 +1,6 @@
 import { getFilm, searchFilms, orderFilms, ordenaFilms } from './data.js';
 import data from './data/ghibli/ghibli.js';
+
 const filmsGhibli = getFilm(data);
 
 /////Funcion que muestra y oculta container de peliculas
@@ -49,151 +50,149 @@ btnInicio.addEventListener("click", function () {
 const showFilmInScreen = (arrayData) => {
   deleteNodo(showAllFilms);
   arrayData.forEach((element) => {
-    const divFilm = document.createElement("div"); //div para cada tarjeta
+    const divFilm = document.createElement("div");
     divFilm.classList.add("card");
-    divFilm.innerHTML = `<img src="${element.poster}" alt="poster">
-        <p class="films-titles">${element.title}</p> 
-        <p class="subTitleCard"><span class="spanCard">Productor: </span>${element.producer}</p> 
-        <p class="subTitleCard"><span class="spanCard">Director: </span>${element.director}</p>
-        <p class="subTitleCard"><span class="spanCard">Fecha de realizacion: </span> ${element.release_date}</p>
-        <p class="subTitleCard"><span class="spanCard">Puntaje: </span> ${element.rt_score}</p>`;
+    divFilm.innerHTML = `<div class= "card-img"><img src="${element.poster}" alt="poster"></div>
+        <div class="card-inf">
+        <h1>${element.title}</h1> 
+        <h2><span> Productor: </span>${element.producer}</h2> 
+        <h2><span> Director: </span>${element.director}</h2>
+        <h2><span> Fecha de realización: </span> ${element.release_date}</h2>
+        </div>`;
     divFilm.setAttribute("id", element.id);
     showAllFilms.appendChild(divFilm);
-
-    //Funcion para abrir una nueva pantalla con info de cada peli, se extrae el id de la data
-    //para saber de que pelicula hablamos, se utiliza evento click, function 
 
     const nuevaPantalla = document.getElementById(element.id)
     nuevaPantalla.addEventListener("click", infoPelis);
 
     //Funcion para extraer la data requerida para la pagina 2 
+    
     function infoPelis() {
-      showAllFilms.textContent = '';//La propiedad textContentrepresenta el contenido de texto de un nodo y sus descendientes.
+      const showOneFilm = document.getElementById("showOneFilm");
+      //showAllFilms.textContent = '';//La propiedad textContentrepresenta el contenido de texto de un nodo y sus descendientes.
+      document.querySelector(".showAllFilms").style.display = "none";
       document.querySelector(".informationHeader").style.display = "none";
-      document.querySelector(".contenedoropciones").style.display = "none"
+      document.querySelector(".filmsContainer").style.display = "none";
 
-      //Crear una constante para crear contenido independiente a las funciones anteriores, se puede utilizar un article o section de html
-      const datosPeli = document.createElement("article");
-      datosPeli.classList.add("articleNewS");
-      //Se utiliza etiqueta aside que crea contenedor de contenido relacionado al main que en este caso es la descripcion
-      //y el contenedor de personajes pero no necesario
-      const asideSection = document.createElement('aside');
-      asideSection.classList.add("infoPeliculas");//Usar classList es una forma práctica de acceder a la lista de clases de un elemento como una cadena de texto delimitada por espacios a través de element
-      asideSection.innerHTML = `<h2 class="titleNewScreen">${element.title}</h2>
-<img src=${element.poster} class="ImgPortada">
-<div class="boxAside"> 
-<p class="asideP"><span class="spanDescription">Director:</span> ${element.director}</p>
-<p class="asideP"><span class="spanDescription">Productor:</span> ${element.producer}</p> 
-<p class="asideP"><span class="spanDescription">Fecha de realizacion: </span>${element.release_date}</p>
-<p class="asideP"><span class="spanDescription">Score: </span>${element.rt_score}</p></div>`;
-      `<div class="Description"><h3 class="subTitleBox">Descripcion:</h3> <p class="fontF">${element.description}</p></div>`;
-      //Crear una seccion para indicar que es una seccion aparte y ponerle el titulo del contenedor siguiente con
-      //un H"""
-      const mainSection = document.createElement("section");
-      mainSection.classList.add("mainSection");
-      mainSection.innerHTML = `<div class="Description"><h3 class="subTitleBox">Descripcion:</h3> <p class="fontF">${element.description}</p></div>`;
+      //const showOneFilm = document.createElement("section");
+      //showOneFilm.classList.add("showOneFilm");
 
+      const asideSection = document.createElement('div');
+      asideSection.classList.add("inf-movie");//Usar classList es una forma práctica de acceder a la lista de clases de un elemento como una cadena de texto delimitada por espacios a través de element
+      asideSection.innerHTML = `<div class= "card-img-peli"><img src="${element.poster}" alt="poster"></div>
+      <div class="inf-description">
+       <h1>${element.title}</h1> 
+       <h2>Productor:</h2> <p> ${element.producer}</p><hr> 
+       <h2>Director:</h2> <p> ${element.director}</p><hr>
+       <h2>Fecha de realización:</h2> <p> ${element.release_date}</p><hr>
+       <h2>Score:</h2> <p> ${element.rt_score}</p><hr>
+      </div>
+      <div class="inf-summary">
+       <h2>Descripción:</h2> <p> ${element.description}</p><hr>
+      </div>`;
+
+      const container = document.createElement("div");
+      container.classList.add("container");
       //Crear contenedor para todos los personajes con un elemento html section y un classlist diciendole que
       //queremos los personajes en una lista
-      const containerPersonajes = document.createElement("section");
-      containerPersonajes.classList.add("ContainerPersonajes")
-      //Crear un titulo como encabezado de la seccion personajes
-      containerPersonajes.innerHTML = `<h3 class="subTitlePersonajes">Personajes:</h3>`;
+      const containerCharacter = document.createElement("div");
+      containerCharacter.classList.add("container-characters")
+      containerCharacter.innerHTML = `<h2>Personajes:</h2>`;
 
-      //Crear constante para seccion de cada tarjeta de cada personaje 
-      const getPersonajes = document.createElement('section');
-      getPersonajes.classList.add("boxAllCharacters");
+      const showOneCharacter = document.createElement("div");
+      showOneCharacter.classList.add("showOneCharacter")
 
-      //funcion (bucle) que devuelva un array para traer a todos los personajes y su info, puede ser un bucle For
       const character = element.people;
       //Recordar que se inicia (indexa) desde cero y nuestro array es character y queremos extraer subarrays de people
       for (let i = 0; i < character.length - 1; i++) {
-        containerPersonajes.innerHTML += `
-  <div class="tarjeta-wrap">
-    <div class="tarjeta">
+        showOneCharacter.innerHTML += `<div class="tarjeta">
       <div class="adelante">
-        <h1 class="designNameCard">${character[i].name}</h1>
-        <img src=" ${character[i].img}" alt="" class="imgDesignCard">
+      <h3>${character[i].name}</h3>
+      <div class="adelanteImg"><img src=" ${character[i].img}" alt="" class="imgDesignCard"></div>
       </div>
       <div class="atras"> 
         <div class="decriptionCharacters">
-          <p><span class="spanDescription">Genero:</span> ${character[i].gender}</p>
-          <p><span class="spanDescription">Edad: </span>${character[i].age}</p>
-          <p><span class="spanDescription">Color de ojos:</span> ${character[i].eye_color}</p>
-          <p><span class="spanDescription">Color de cabello:</span> ${character[i].hair_color}</p>
-          <p><span class="spanDescription">Especie:</span>  ${character[i].specie}</p>
+          <p><span> Genero:</span> ${character[i].gender}</p>
+          <p><span> Edad: </span>${character[i].age}</p>
+          <p><span> Color de ojos:</span> ${character[i].eye_color}</p>
+          <p><span> Color de cabello:</span> ${character[i].hair_color}</p>
+          <p><span> Especie:</span>  ${character[i].specie}</p>
         </div>
       </div>
-    </div>
-  </div>`;
+    </div>`;
       }
       //Crear contenedor para agregar vehiculos con un section
-      const containerVehicles = document.createElement('section');
-      containerVehicles.classList.add("sectionVehicles");
-      containerVehicles.innerHTML = `<h3 class="subTitleVehicles">Vehicles: </h3>`;
+      const containerVehicles = document.createElement('div');
+      containerVehicles.classList.add("container-vehicles");
+      containerVehicles.innerHTML = `<h2 >Vehiculos:</h2>`;
+
+      const showOneVehicles = document.createElement("div");
+      showOneVehicles.classList.add("showOneVehicles")
 
       //Crear funcion para extraer los vehiculos con su info
       const vehicles = element.vehicles;
       if (vehicles.length === 0) {
         // Si no se encuentra ningun dato mostrar imagen con mensaje de error
-        containerVehicles.innerHTML = `<h2 class="subTitleError">Vehicles:</h2> <div class="addFlexError"> No se encuentran vehiculos.<img class="errorVehicles"src="images/NotFound2.jpeg"></div>`;
+        showOneVehicles.innerHTML = `
+        <div class="addFlexError">
+        <p> No se encuentran vehiculos. </p>
+        <img src="images/NotFound2.jpeg"></div>`;
       } else {
         for (let i = 0; i < vehicles.length; i++) {
-          containerVehicles.innerHTML += `
-     <div class="tarjeta-wrap">
-       <div class="tarjeta">
-         <div class="adelante">
-           <h1 class="designNameCard">${vehicles[i].name}</h1>
-           <img src=" ${vehicles[i].img}" alt="" class="imgDesignCard">
+          showOneVehicles.innerHTML += `<div class="tarjeta-large">
+         <div class="adelante-large">
+         <h3>${vehicles[i].name}</h3>
+         <div class="adelanteImg"><img src="${vehicles[i].img}" alt="" class="imgDesignCard"></div>
          </div>
-         <div class="atras"> 
+         <div class="atras-large"> 
            <div class="decriptionCharacters">
-             <p><span class="spanDescription">Descripcion:</span> ${vehicles[i].description}</p>
-             <p><span class="spanDescription">Clase de vehiculo: </span>${vehicles[i].vehicle_class}</p>
-             <p><span class="spanDescription">Tamaño:</span> ${vehicles[i].length}</p>
+             <p><span> Descripcion:</span> ${vehicles[i].description}</p>
+             <p><span> Clase de vehiculo: </span>${vehicles[i].vehicle_class}</p>
+             <p><span> Tamaño:</span> ${vehicles[i].length}</p>
            </div>
          </div>
-       </div>
-     </div>`;
+       </div>`;
         }
       }
 
       //Crear contenedor para agregar Locaciones con un section
+      const containerLocations = document.createElement('div');
+      containerLocations.classList.add("container-location")
+      containerLocations.innerHTML = `<h2>Locaciones:</h2>`;
 
-      const containerLocations = document.createElement('section');
-      containerLocations.classList.add("sectionLocation")
+      const showOneLocation = document.createElement("div");
+      showOneLocation.classList.add("showOneLocation")
 
-      //Crear funcion para extraer las locaciones con su info
-      containerLocations.innerHTML = `<h3 class="subTitleLocation">Locaciones:</h3>`;
       const locations = element.locations;
       if (locations.length === 0) {
         //Si no se encuentra ningun dato mostrar imagen con mensaje de error
-        containerLocations.innerHTML = `<h3 class="subTitleError">Locaciones:</h3> <div class="addFlexError"> No se encuentran Locaciones.<img class="errorLocations"src="images/NotFound2.jpeg"></div>`;
+        showOneLocation.innerHTML = `
+        <div class="addFlexError">
+        <p> No se encuentran Locaciones. </p>
+        <img src="images/NotFound2.jpeg"></div>`;
       } else {
         for (let i = 0; i < locations.length - 1; i++) {
-          containerLocations.innerHTML += `
-      <div class="tarjeta-wrap">
-        <div class="tarjeta">
-          <div class="adelante">
-            <h1 class="designNameCard">${locations[i].name}</h1>
-            <img src=" ${locations[i].img}" alt="" class="imgDesignCard">
+          showOneLocation.innerHTML += `<div class="tarjeta-large">
+          <div class="adelante-large">
+           <h3>${locations[i].name}</h3>
+           <div class="adelanteImg"><img src="${locations[i].img}" alt="" class="imgDesignCard"></div>
           </div>
-          <div class="atras"> 
+          <div class="atras-large"> 
             <div class="decriptionCharacters">
-              <p><span class="spanDescription">Climate:</span> ${locations[i].climate}</p>
-              <p><span class="spanDescription">Terrain:</span> ${locations[i].terrain}</p>
-              <p><span class="spanDescription">Surface water:</span>  ${locations[i].surface_water}</p>
-              <p><span class="spanDescription">Residents:</span>  ${locations[i].residents}</p>
+              <p><span> Climate:</span> ${locations[i].climate}</p>
+              <p><span> Terrain:</span> ${locations[i].terrain}</p>
+              <p><span> Surface water:</span>  ${locations[i].surface_water}</p>
+              <p><span> Residents:</span>  ${locations[i].residents}</p>
             </div>
           </div>
-        </div>
-      </div>`;
+        </div>`;
         }
       }
-      showAllFilms.append(datosPeli);
-      datosPeli.append(asideSection, mainSection);
-      containerPersonajes.append(getPersonajes);
-      mainSection.append(containerPersonajes, containerVehicles, containerLocations);
+      showOneFilm.append(asideSection,container);
+      container.append( containerCharacter, containerVehicles, containerLocations);
+      containerCharacter.append(showOneCharacter);
+      containerVehicles.append(showOneVehicles);
+      containerLocations.append(showOneLocation);
     }
   });
 };

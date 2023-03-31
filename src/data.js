@@ -1,11 +1,6 @@
-//export const example = () => {
-//return 'example';
-//};
-
-
 // Trae Films
 export const getFilm = (data) => {
-  const dataGhibli = data.films.map((arr) => arr);
+  const dataGhibli = data.films.filter((arr) => arr);
   return dataGhibli;
 }
 
