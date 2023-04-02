@@ -1,102 +1,93 @@
 * {
-
   margin: 0;
   padding: 0;
-}
-
-.Allcontainer {
-
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.containerAll {
-  flex: 1;
-  min-width: 250px;
+  box-sizing: border-box;
 }
 
 /*barra gris*/
 .grisHeader {
   background: #bceeff;
-  height: 70px;
+  height: 140px;
   width: 100%;
-}
-
-/* Images personajes con encabezado*/
-.imgPerson {
-  height: 150px;
-  background-image: url(images/headerghibli.png.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  margin-top: 1px;
-  margin-bottom: 1px;
-}
-
-.header img {
-  width: 130px;
-  margin-left: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 60px;
 }
 
 /*logo totoro*/
-.logo-header {
+.logo-header,
+.button-header {
+  width: 100%;
   display: flex;
-  float: left;
-  padding: 8px;
-  width: 100px;
-  margin-left: 1px;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.logo-header img {
+  width: 150px;
+  background-size: cover;
 }
 
 /*Boton inicio refresh*/
 .inicio {
-  display: flex;
-  float: right;
-  padding: 3px;
-  margin-right: 15px;
-  margin-top: 15px;
-  color: white;
-  background-color: black;
-  text-decoration: none;
-  font-size: x-large;
-  font-weight: bold;
-  border-radius: 10px;
-  letter-spacing: 1px;
-  transition: .4s;
+  width: 120px;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  background: blueviolet;
+  box-shadow: 2px 2px 10px 0px rgba(0, 85, 212, 0.4);
+  cursor: pointer;
 }
 
 .inicio:hover {
-  box-shadow: 3px 3px 10px 10px #8a9597;
+  background: blue;
 }
 
 /*body*/
 body {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-}
-/*Introduccion de Studios Ghibli*/
-.informationHeader {
-  background-color: #bceeff;
-  border-radius: 15%;
-  margin-top: 0;
+  font-family: 'Nunito', sans-serif;
 }
 
-.encabezado {
-  font-family: Arial, Helvetica, sans-serif;
+.information {
   display: flex;
-  color: black;
-  justify-content: center;
+  align-items: center;
 }
 
-.introduccion {
+.information-Header {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+/* Images personajes con encabezado*/
+.information-Header img {
+  width: 100%;
+  filter: brightness(50%);
+}
+
+/*Introduccion de Studios Ghibli*/
+.encabezado {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+}
+
+.encabezado p {
   display: flex;
   justify-content: center;
   width: 50%;
-  font-size: 16px;
-  color: #000;
-  font-weight: bold;
-  padding: 5px;
-  list-style: none;
-  font-family: Arial, Helvetica, sans-serif
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  padding: 10px 0px;
 }
+
+
 /* Seccion de botones de filtrado*/
 .filmsContainer {
   display: flex;
@@ -111,17 +102,9 @@ body {
   margin: 4vh auto;
 }
 
-.opcionesfiltros {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.orderCron,
+.orderFilms,
 .sortZA,
-.inputSearch {
-  font-family: Arial, Helvetica, sans-serif;
+.searchFilm {
   padding: 1rem;
   border: 3px solid transparent;
   transition: .3s ease-in-out;
@@ -132,158 +115,230 @@ body {
   outline: none;
   padding: 4px 0;
 }
+
+
 /*Contenedor de las Peliculas*/
-.containerFilms {
-  justify-content: center;
+.showAllFilms {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
 }
 
-#showAllFilms {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  flex-grow: 1;
+
+@media screen and (max-width:480px) {
+  .grisHeader {
+    flex-direction: column;
+    height: 180px;
+  }
+
+  .logo-header,
+  .button-header {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .information-Header {
+    height: 500px;
+  }
+
+  .information-Header img {
+    height: 500px;
+  }
+
+  .encabezado p {
+    width: 100%;
+    font-size: 18px;
+    padding: 30px;
+  }
+
+  .filmsContainer {
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+    padding-top: 15px;
+
+
+  }
+
+  .orderFilms,
+  .sortZA,
+  .searchFilm {
+    margin-bottom: 10px;
+    width: 90%;
+  }
+
+  .showAllFilms {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .card {
-  margin: 30px 30px;
-  justify-content: center;
-  width: 200px;
-  height: 500px;
+  margin: 30px 0px;
+  width: 300px;
+  height: 580px;
   background-color: rgba(255, 255, 255, 0.644);
-  border-radius: 5%;
+  border-radius: 15px;
   box-shadow: 0px 0px 25px #d7d7d7;
 }
 
-.card>img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-top-left-radius: 5%;
-    border-top-right-radius: 5%;
-    border: #000;
-    filter: brightness(70%);
+.card .card-img {
+  height: 400px;
+  overflow: hidden;
 }
 
-.card>img:hover {
+.card-img img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  filter: brightness(50%);
+}
+
+.card-img img:hover {
   filter: brightness(100%);
 }
-.card>p {
-  font-family: Helvetica, sans-serif;
-  padding: 2px 3px;
-}
-.films-titles {
-  font-weight: bold;
-  font-size: 12pt;
-  color: azure;
-  margin: 5%;
-  background-color: black;
-  text-align: center;
-}
-/*Texto de cada pelicula*/
-.subTitleCard {
-  font-size: 10pt;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 5%;
-  text-align: left;
-}
-/* Nueva Pantalla Click en cada pelicula*/
-.articleNewS {
-  display: flex;
-  padding: 20px 50px;
-}
 
-.infoPeliculas {
-  margin: 10px;
-  padding: 15px;
-  height: 100vh;
+.card-inf {
   display: flex;
   flex-direction: column;
-  float: left;
-  background: #ececec;
-  border-radius: 25px;
-  width: auto;
-}
-
-.asideP {
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(104, 135, 192);
-}
-
-.boxAside {
-  width: 250px;
-  margin: 20px 20px;
-  padding: 10px;
-}
-
-h2,
-.titleNewScreen,
-.subTitleLocation,
-.subTitleVehicles,
-.subTitlePersonajes,
-.subTitleBox,
-.subTitleError {
-  font-family: Arial, Helvetica, sans-serif;
-  color: cornflowerblue;
-  font-size: 25px;
   text-align: center;
 }
 
-.mainSection {
-  margin: 0;
-  padding: 0;
+.card-inf h1 {
+  background-color: black;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 10px;
 }
 
-.Description {
-  margin: 10px;
-  padding: 15px;
-  border-radius: 25px;
-  background-color: #ececec;
+.card-inf h2 {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 0px 0px 0px;
 }
 
-.errorVehicles,
-.errorLocations {
-  height: 120px;
-  width: 90px;
-  border-radius: 9%;
-  object-fit: cover;
-}
-
-/* Descripcion Pelis*/
-.subTitleBox {
-  font-family: Arial, Helvetica, sans-serif;
-  color: cornflowerblue;
-  font-size: 22px;
-  text-align: left;
-  padding-bottom: 10px;
-}
-
-.fontF {
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(101, 126, 172);
-}
-
-/* Contenedor Personajes */
-.ContainerPersonajes {
-  margin: 10px;
-  padding: 15px;
-  background-color: #ececec;
-  border-radius: 25px;
+.container {
   display: flex;
-  flex-wrap: wrap;
-  flex-grow: 1;
+  flex-direction: column;
 }
 
-h3 {
-  font-family: 'Nunito', sans-serif;
-  color: cornflowerblue;
-  font-size: 22px;
-  text-align: left;
-  margin: 10px 100% 0px 10px;
+/* Nueva Pantalla Click en cada pelicula*/
+.showOneFilm {
+  display: flex;
+  flex-direction: row;
+  background-color: whitesmoke;
 }
 
-.tarjeta-wrap {
-  margin: 10px;
+.card .card-img-peli {
+  height: 400px;
+  overflow: hidden;
+}
 
+.card-img-peli img {
+  width: 100%;
+}
+
+.inf-movie {
+  width: 30%;
+  margin: 40px 0px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.inf-description {
+  background-color: #fff;
+}
+
+.inf-description h1 {
+  background-color: black;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px 15px;
+}
+
+.inf-description h2 {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 0px 0px 0px;
+}
+
+.inf-description p {
+  color: black;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 0px 0px 5px 0px;
+}
+
+hr {
+  height: 1.5px;
+  background-color: black;
+}
+
+.inf-summary {
+  background-color: #fff;
+  margin: 40px 0px 0px 0px;
+}
+
+.inf-summary h2 {
+  background-color: darkblue;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 15px;
+  text-transform: uppercase;
+}
+
+.inf-summary p {
+  color: black;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 15px 15px 15px 15px;
+}
+
+.container {
+  width: 70%;
+  margin: 40px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-characters,
+.container-vehicles,
+.container-location {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fff;
+}
+
+.container-vehicles,
+.container-location {
+  margin: 40px 0px 0px 0px;
+}
+
+.container-characters h2,
+.container-vehicles h2,
+.container-location h2 {
+  background-color: darkblue;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 15px;
+  text-transform: uppercase;
+}
+
+.showOneCharacter {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  padding: 30px;
 }
 
 .tarjeta {
@@ -292,14 +347,50 @@ h3 {
   position: relative;
   transform-style: preserve-3d;
   transition: .7s ease;
-  box-shadow: 8px 8px 5px rgb(0 0 0 / 15%);
+  box-shadow: 0px 0px 25px #d7d7d7;
+  background-color: black;
+}
+
+.tarjeta:hover {
+  transform: rotateY(180deg);
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 25px #d7d7d7;
+}
+
+.adelante {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.adelante h3 {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 0px;
+  z-index: 0;
+}
+
+.adelanteImg {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+
+}
+
+.imgDesignCard {
+  width: 100%;
+  filter: brightness(75%);
 }
 
 .adelante,
 .atras {
-  border-radius: 10%;
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -307,83 +398,183 @@ h3 {
   backface-visibility: hidden;
 }
 
-.adelante {
-  width: 100%;
-  background: #1b9bff;
-}
-
 .atras {
-  border-radius: 10%;
   transform: rotateY(180deg);
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  color: #0082e6;
-  background: rgba(223, 234, 241, 0.7) 0;
-}
-
-.tarjeta-wrap:hover .tarjeta {
-  border-radius: 10%;
-  transform: rotateY(180deg);
-  color: #0082e6;
-  background: rgba(223, 234, 241, 0.7) 0;
-}
-
-.imgDesignCard {
-  border-bottom-left-radius: 10%;
-  border-bottom-right-radius: 10%;
   width: 200px;
-  height: 180px;
-  object-fit: cover;
-}
-
-.designNameCard {
-  padding: 5px;
-  font-size: 18px;
-  text-align: center;
-  color: #fff;
-  font-family: 'Nunito', sans-serif;
+  height: 200px;
+  background: whitesmoke;
 }
 
 .decriptionCharacters {
-  margin: 25px;
+  padding: 10px;
 }
 
-.spanDescription {
-  font-size: 16px;
+.decriptionCharacters span {
+  font-size: 15px;
   font-weight: bold;
-  font-family: 'Nunito', sans-serif;
 }
 
-p {
-  font-family: 'Nunito', sans-serif;
+.decriptionCharacters p {
+  font-size: 15px;
+  font-weight: 500;
 }
 
-.sectionVehicles {
-  margin: 10px;
-  padding: 15px;
-  background-color: #ececec;
-  border-radius: 25px;
+.showOneVehicles,
+.showOneLocation {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  padding: 30px;
+}
+
+.tarjeta-large {
+  width: 400px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: .7s ease;
+  box-shadow: 0px 0px 25px #d7d7d7;
+  background-color: black;
+}
+
+.tarjeta-large:hover {
+  transform: rotateY(180deg);
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 25px #d7d7d7;
+}
+
+.adelante-large {
   display: flex;
-  flex-wrap: wrap;
-  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 400px;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.sectionLocation {
-  margin: 10px;
-  padding: 15px;
-  background-color: #ececec;
-  border-radius: 25px;
+.adelante-large h3 {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 0px;
+  z-index: 0;
+}
+
+.adelante-large,
+.atras-large {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.atras-large {
+  transform: rotateY(180deg);
   display: flex;
-  flex-wrap: wrap;
-  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  background: whitesmoke;
+}
+
+.atras-large .decriptionCharacters {
+  padding: 25px;
+}
+
+.addFlexError {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  width: 400px;
+  height: 200px;
+}
+
+.addFlexError p {
+  margin: 10px 0px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.addFlexError img {
+  width: 200px;
+}
+
+footer {
+  background: #bceeff;
+  height: 140px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 20px 60px;
+}
+
+
+@media screen and (max-width:480px) {
+  .showOneFilm {
+    flex-direction: column;
+  }
+
+  .inf-movie {
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+  }
+
+  .container {
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+  }
+
+  .showOneCharacter {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .showOneVehicles,
+  .showOneLocation {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .tarjeta-large {
+    width: 200px;
+  }
+  
+  .adelante-large {
+    width: 200px;
+  }
+
+  .atras-large {
+    width: 200px;
+  }
+  
+  .atras-large .decriptionCharacters {
+    padding: 10px;
+  }
+  
+  .addFlexError {
+    width: 200px;
+  }
+
 }
 
 footer p {
-  font-size: x-large;
+  font-size: 22px;
+  font-weight: 500;
   background: #bceeff;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  bottom: 0;
-  width: 100%;
-  margin: 0;
-  padding: 10px 0;
 }
